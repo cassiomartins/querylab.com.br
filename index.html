@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QueryLab — Soluções em Software e Dados</title>
+  <meta name="description" content="A QueryLab transforma dados em decisões. Desenvolvemos software, pipelines de dados e dashboards para empresas que querem crescer com inteligência." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -23,7 +24,6 @@
     }
 
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--bg);
       color: var(--text);
@@ -32,164 +32,113 @@
       line-height: 1.7;
       overflow-x: hidden;
     }
-
     body::after {
       content: '';
-      position: fixed; inset: 0; z-index: 9998;
-      pointer-events: none;
+      position: fixed; inset: 0; z-index: 9998; pointer-events: none;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
       opacity: 0.028;
     }
 
     /* ── LOGO ── */
     .logo {
-      display: inline-flex;
-      align-items: center;
-      position: relative;
-      padding: 0.28em 0.75em;
-      text-decoration: none;
+      display: inline-flex; align-items: center;
+      position: relative; padding: 0.28em 0.75em; text-decoration: none;
     }
     .logo-frame-tl, .logo-frame-tr, .logo-frame-bl, .logo-frame-br {
-      position: absolute;
-      width: 11px; height: 11px;
-      border-color: var(--text);
-      border-style: solid;
+      position: absolute; width: 11px; height: 11px;
+      border-color: var(--text); border-style: solid;
     }
-    .logo-frame-tl { top: 0; left: 0;  border-width: 1.5px 0 0 1.5px; }
-    .logo-frame-tr { top: 0; right: 0; border-width: 1.5px 1.5px 0 0; }
-    .logo-frame-bl { bottom: 0; left: 0;  border-width: 0 0 1.5px 1.5px; }
-    .logo-frame-br { bottom: 0; right: 0; border-width: 0 1.5px 1.5px 0; }
-    .logo-text {
-      font-family: 'Space Mono', monospace;
-      font-size: 1.1rem;
-      color: var(--text);
-      line-height: 1;
-      letter-spacing: -0.02em;
-    }
+    .logo-frame-tl { top:0; left:0;   border-width: 1.5px 0 0 1.5px; }
+    .logo-frame-tr { top:0; right:0;  border-width: 1.5px 1.5px 0 0; }
+    .logo-frame-bl { bottom:0; left:0;  border-width: 0 0 1.5px 1.5px; }
+    .logo-frame-br { bottom:0; right:0; border-width: 0 1.5px 1.5px 0; }
+    .logo-text { font-family: 'Space Mono', monospace; font-size: 1.1rem; color: var(--text); line-height: 1; letter-spacing: -0.02em; }
     .logo-text .q { font-weight: 700; }
     .logo-text .l { font-weight: 400; opacity: 0.65; }
 
     /* ── NAV ── */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top:0; left:0; right:0; z-index:100;
       display: flex; align-items: center; justify-content: space-between;
       padding: 1.1rem 5vw;
-      background: rgba(10,10,11,0.8);
-      backdrop-filter: blur(20px);
+      background: rgba(10,10,11,0.8); backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
     }
     .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.84rem; font-weight: 400; letter-spacing: 0.04em; transition: color 0.2s; }
     .nav-links a:hover { color: var(--text); }
-    .nav-cta {
-      color: var(--bg) !important;
-      background: var(--text);
-      padding: 0.5rem 1.2rem;
-      border-radius: 3px;
-      font-weight: 600 !important;
-      font-size: 0.78rem !important;
-      letter-spacing: 0.08em !important;
-      text-transform: uppercase;
-      transition: background 0.2s !important;
-    }
+    .nav-cta { color: var(--bg) !important; background: var(--text); padding: 0.5rem 1.2rem; border-radius: 3px; font-weight: 600 !important; font-size: 0.78rem !important; letter-spacing: 0.08em !important; text-transform: uppercase; transition: background 0.2s !important; }
     .nav-cta:hover { background: var(--cyan) !important; color: var(--bg) !important; }
 
     /* ── HERO ── */
     #hero {
-      min-height: 100vh;
-      display: flex; flex-direction: column;
+      min-height: 100vh; display: flex; flex-direction: column;
       align-items: center; justify-content: center;
-      padding: 140px 5vw 100px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+      padding: 140px 5vw 100px; text-align: center;
+      position: relative; overflow: hidden;
     }
     #hero::before {
-      content: '';
-      position: absolute; inset: 0;
+      content: ''; position: absolute; inset: 0;
       background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.007) 2px, rgba(255,255,255,0.007) 4px);
       pointer-events: none;
     }
     .hero-bg-mark {
       position: absolute;
       font-family: 'Space Mono', monospace;
-      font-size: clamp(120px, 24vw, 260px);
-      font-weight: 700;
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(255,255,255,0.035);
+      font-size: clamp(120px, 24vw, 260px); font-weight: 700;
+      color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.035);
       user-select: none; pointer-events: none;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      white-space: nowrap;
-      letter-spacing: -0.06em;
+      top: 50%; left: 50%; transform: translate(-50%,-50%);
+      white-space: nowrap; letter-spacing: -0.06em;
     }
     .hero-glow {
-      position: absolute;
-      width: 500px; height: 500px;
+      position: absolute; width: 500px; height: 500px;
       background: radial-gradient(circle, rgba(74,240,212,0.055) 0%, transparent 70%);
-      top: 50%; left: 50%; transform: translate(-50%,-50%);
-      pointer-events: none;
+      top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none;
     }
-
     .hero-eyebrow {
       display: flex; align-items: center; gap: 0.8rem;
-      font-family: 'Space Mono', monospace;
-      font-size: 0.68rem; color: var(--muted);
+      font-family: 'Space Mono', monospace; font-size: 0.68rem; color: var(--muted);
       letter-spacing: 0.14em; text-transform: uppercase;
-      margin-bottom: 2.5rem;
-      position: relative; z-index: 1;
+      margin-bottom: 2.5rem; position: relative; z-index: 1;
       animation: fade-up 0.6s ease both;
     }
     .hero-eyebrow::before, .hero-eyebrow::after { content: ''; height: 1px; width: 36px; background: var(--dim); }
-
     .hero-title {
       font-family: 'Space Mono', monospace;
-      font-size: clamp(2.2rem, 5.5vw, 4.8rem);
-      font-weight: 700;
-      letter-spacing: -0.04em;
-      line-height: 1.08;
+      font-size: clamp(2.2rem, 5.5vw, 4.8rem); font-weight: 700;
+      letter-spacing: -0.04em; line-height: 1.08;
       position: relative; z-index: 1;
       animation: fade-up 0.7s 0.08s ease both;
     }
     .hero-title .thin { font-weight: 400; color: var(--muted); }
     .hero-title .hl { color: var(--cyan); }
-
     .hero-sub {
-      max-width: 500px; color: var(--muted);
-      font-size: 1rem; font-weight: 300;
-      margin: 2rem auto 0;
-      position: relative; z-index: 1;
-      animation: fade-up 0.7s 0.16s ease both;
-      line-height: 1.85;
+      max-width: 520px; color: var(--muted); font-size: 1rem; font-weight: 300;
+      margin: 2rem auto 0; position: relative; z-index: 1;
+      animation: fade-up 0.7s 0.16s ease both; line-height: 1.85;
     }
-
     .hero-actions {
       display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
       margin-top: 3rem; position: relative; z-index: 1;
       animation: fade-up 0.7s 0.24s ease both;
     }
-
     .btn-primary {
       background: var(--text); color: var(--bg);
       font-family: 'Space Mono', monospace; font-weight: 700;
       font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
       padding: 0.9rem 2rem; border-radius: 3px; border: none;
-      cursor: pointer; text-decoration: none;
-      transition: background 0.2s, transform 0.2s;
+      cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.2s;
     }
     .btn-primary:hover { background: var(--cyan); transform: translateY(-2px); }
-
     .btn-outline {
       background: transparent; color: var(--muted);
       font-family: 'Space Mono', monospace; font-weight: 400;
       font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 0.9rem 2rem; border-radius: 3px;
-      border: 1px solid var(--border2);
-      cursor: pointer; text-decoration: none;
-      transition: border-color 0.2s, color 0.2s;
+      padding: 0.9rem 2rem; border-radius: 3px; border: 1px solid var(--border2);
+      cursor: pointer; text-decoration: none; transition: border-color 0.2s, color 0.2s;
     }
     .btn-outline:hover { border-color: var(--text); color: var(--text); }
-
     .hero-stats {
       display: flex; align-items: stretch; gap: 0;
       margin-top: 5rem; position: relative; z-index: 1;
@@ -203,28 +152,24 @@
 
     /* ── SECTION BASE ── */
     section { padding: 100px 5vw; }
-
     .section-label {
       font-family: 'Space Mono', monospace; font-size: 0.65rem; font-weight: 700;
       letter-spacing: 0.2em; text-transform: uppercase; color: var(--cyan);
       margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem;
     }
     .section-label::after { content: ''; height: 1px; width: 28px; background: var(--cyan); opacity: 0.45; }
-
     .section-title {
       font-family: 'Space Mono', monospace;
-      font-size: clamp(1.7rem, 3.2vw, 2.6rem);
-      font-weight: 700; letter-spacing: -0.03em; line-height: 1.12; max-width: 560px;
+      font-size: clamp(1.7rem, 3.2vw, 2.6rem); font-weight: 700;
+      letter-spacing: -0.03em; line-height: 1.12; max-width: 560px;
     }
     .section-title .thin { font-weight: 400; color: var(--muted); }
-
     .section-desc { color: var(--muted); max-width: 480px; margin-top: 1rem; font-weight: 300; font-size: 0.95rem; line-height: 1.85; }
 
     /* ── SERVIÇOS ── */
     #servicos { background: var(--bg2); }
     #servicos .wrap { max-width: 1200px; margin: 0 auto; }
     #servicos .hdr { margin-bottom: 4rem; }
-
     .services-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
       border: 1px solid var(--border); border-radius: 4px; overflow: hidden;
@@ -235,12 +180,8 @@
     }
     .svc:last-child { border-right: none; }
     .svc:hover { background: rgba(255,255,255,0.02); }
-    .svc::after {
-      content: ''; position: absolute; top: 0; left: 0;
-      width: 0; height: 2px; background: var(--cyan); transition: width 0.45s ease;
-    }
+    .svc::after { content: ''; position: absolute; top:0; left:0; width:0; height:2px; background: var(--cyan); transition: width 0.45s ease; }
     .svc:hover::after { width: 100%; }
-
     .svc-num { font-family: 'Space Mono', monospace; font-size: 0.65rem; color: var(--dim); letter-spacing: 0.1em; margin-bottom: 2rem; }
     .svc h3 { font-family: 'Space Mono', monospace; font-size: 1rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; line-height: 1.35; }
     .svc h3 .l { font-weight: 400; color: var(--muted); }
@@ -248,12 +189,60 @@
     .svc-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 2rem; }
     .tag { font-family: 'Space Mono', monospace; font-size: 0.62rem; padding: 0.25rem 0.55rem; border-radius: 2px; border: 1px solid var(--border); color: var(--dim); letter-spacing: 0.04em; }
 
+    /* ── COMO TRABALHAMOS ── */
+    #processo { background: var(--bg); }
+    #processo .wrap { max-width: 1200px; margin: 0 auto; }
+    #processo .hdr { margin-bottom: 4rem; }
+    .process-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+      border: 1px solid var(--border); border-radius: 4px; overflow: hidden;
+    }
+    .proc-step {
+      padding: 2.5rem 2rem; border-right: 1px solid var(--border);
+      position: relative; transition: background 0.25s;
+    }
+    .proc-step:last-child { border-right: none; }
+    .proc-step:hover { background: rgba(255,255,255,0.02); }
+    .proc-arrow {
+      position: absolute; right: -12px; top: 50%;
+      transform: translateY(-50%); z-index: 1;
+      font-family: 'Space Mono', monospace; font-size: 0.9rem; color: var(--dim);
+    }
+    .proc-step:last-child .proc-arrow { display: none; }
+    .proc-num { font-family: 'Space Mono', monospace; font-size: 0.65rem; color: var(--cyan); letter-spacing: 0.1em; margin-bottom: 1.5rem; opacity: 0.7; }
+    .proc-icon { font-size: 1.5rem; margin-bottom: 1rem; }
+    .proc-step h3 { font-family: 'Space Mono', monospace; font-size: 0.92rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.8rem; }
+    .proc-step p { color: var(--muted); font-size: 0.84rem; line-height: 1.8; font-weight: 300; }
+
+    /* ── TECNOLOGIAS ── */
+    #tecnologias { background: var(--bg2); }
+    #tecnologias .wrap { max-width: 1200px; margin: 0 auto; }
+    #tecnologias .hdr { margin-bottom: 4rem; }
+    .tech-groups { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+    .tech-group { display: grid; grid-template-columns: 200px 1fr; border-bottom: 1px solid var(--border); }
+    .tech-group:last-child { border-bottom: none; }
+    .tech-group-label {
+      padding: 1.8rem 2rem; border-right: 1px solid var(--border);
+      display: flex; align-items: center;
+      font-family: 'Space Mono', monospace; font-size: 0.68rem;
+      font-weight: 700; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase;
+    }
+    .tech-items { padding: 1.8rem 2rem; display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
+    .tech-pill {
+      display: flex; align-items: center; gap: 0.5rem;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 3px; padding: 0.4rem 0.9rem;
+      font-family: 'Space Mono', monospace; font-size: 0.72rem;
+      color: var(--text); letter-spacing: 0.04em;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .tech-pill:hover { border-color: var(--cyan); color: var(--cyan); }
+    .tech-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); opacity: 0.6; flex-shrink: 0; }
+
     /* ── SOBRE ── */
     #sobre-wrap { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
-
     .sobre-text p { color: var(--muted); margin-bottom: 1.2rem; font-size: 0.93rem; font-weight: 300; line-height: 1.9; }
     .sobre-text p strong { color: var(--text); font-weight: 500; }
-
     .values { margin-top: 2.5rem; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
     .val-item {
       display: flex; align-items: center; gap: 1.2rem;
@@ -278,7 +267,6 @@
     /* ── CONTATO ── */
     #contato { background: var(--bg2); }
     .contato-wrap { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.4fr; gap: 6rem; align-items: start; }
-
     .contact-info p { color: var(--muted); font-size: 0.92rem; font-weight: 300; margin-top: 1.5rem; line-height: 1.9; }
     .contact-links { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1rem; }
     .clink { display: flex; align-items: center; gap: 0.8rem; color: var(--muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
@@ -286,6 +274,7 @@
     .clink-icon { width: 34px; height: 34px; border: 1px solid var(--border); border-radius: 3px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: border-color 0.2s; }
     .clink:hover .clink-icon { border-color: var(--border2); }
 
+    /* Form */
     .contact-form { display: flex; flex-direction: column; gap: 1rem; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .fg { display: flex; flex-direction: column; gap: 0.4rem; }
@@ -298,7 +287,6 @@
     .fg input:focus, .fg textarea:focus, .fg select:focus { border-color: var(--border2); }
     .fg input::placeholder, .fg textarea::placeholder { color: var(--dim); }
     .fg textarea { resize: vertical; min-height: 120px; }
-
     .form-submit {
       width: 100%; background: var(--text); color: var(--bg);
       font-family: 'Space Mono', monospace; font-weight: 700;
@@ -307,6 +295,15 @@
       transition: background 0.2s, transform 0.2s; margin-top: 0.5rem;
     }
     .form-submit:hover { background: var(--cyan); color: var(--bg); transform: translateY(-1px); }
+    .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+    /* Form feedback */
+    .form-msg {
+      display: none; padding: 0.9rem 1rem; border-radius: 3px;
+      font-family: 'Space Mono', monospace; font-size: 0.72rem; letter-spacing: 0.06em;
+    }
+    .form-msg.success { display: block; background: rgba(74,240,212,0.08); border: 1px solid rgba(74,240,212,0.25); color: var(--cyan); }
+    .form-msg.error { display: block; background: rgba(255,80,80,0.08); border: 1px solid rgba(255,80,80,0.25); color: #ff6b6b; }
 
     /* ── FOOTER ── */
     footer {
@@ -322,9 +319,14 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      .services-grid { grid-template-columns: 1fr; }
+      .services-grid, .process-grid { grid-template-columns: 1fr; }
       .svc { border-right: none; border-bottom: 1px solid var(--border); }
       .svc:last-child { border-bottom: none; }
+      .proc-step { border-right: none; border-bottom: 1px solid var(--border); }
+      .proc-step:last-child { border-bottom: none; }
+      .proc-arrow { display: none; }
+      .tech-group { grid-template-columns: 1fr; }
+      .tech-group-label { border-right: none; border-bottom: 1px solid var(--border); }
       #sobre-wrap { grid-template-columns: 1fr; gap: 3rem; }
       .terminal { display: none; }
       .contato-wrap { grid-template-columns: 1fr; gap: 3rem; }
@@ -345,9 +347,11 @@
       <div class="logo-text"><span class="q">query</span><span class="l">lab</span></div>
     </a>
     <ul class="nav-links">
-      <li><a href="#servicos">serviços</a></li>
-      <li><a href="#sobre">sobre</a></li>
-      <li><a href="#contato" class="nav-cta">contato</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#processo">Método</a></li>
+      <li><a href="#tecnologias">Tecnologias</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato" class="nav-cta">Contato</a></li>
     </ul>
   </nav>
 
@@ -355,33 +359,30 @@
   <section id="hero">
     <div class="hero-glow"></div>
     <div class="hero-bg-mark">QL</div>
-
-    <div class="hero-eyebrow">Software &amp; Dados — Goiânia, BR</div>
-
+    <div class="hero-eyebrow">Software &amp; Dados</div>
     <h1 class="hero-title">
-      Dados que geram<br>
-      <span class="thin">decisões</span> <span class="hl">reais.</span>
+      Seus dados escondem oportunidades.<br>
+      <span class="thin">A gente</span> <span class="hl">encontra.</span>
     </h1>
-
-    <p class="hero-sub">Desenvolvemos software, engenhamos pipelines de dados e construímos dashboards que transformam complexidade em clareza operacional.</p>
-
+    <p class="hero-sub">
+      Transformamos dados dispersos em informações precisas. Desenvolvemos software, estruturamos pipelines e construímos dashboards apoiados por IA para empresas que querem crescer com inteligência.
+    </p>
     <div class="hero-actions">
       <a href="#contato" class="btn-primary">Iniciar um projeto</a>
       <a href="#servicos" class="btn-outline">Ver serviços</a>
     </div>
-
     <div class="hero-stats">
       <div class="hstat">
-        <span class="hstat-num">End-to-end</span>
-        <div class="hstat-label">SQL ao deploy</div>
+        <span class="hstat-num">Dado → Decisão</span>
+        <div class="hstat-label">Do dado bruto ao insight</div>
       </div>
       <div class="hstat">
-        <span class="hstat-num">3 serviços</span>
+        <span class="hstat-num">3 frentes</span>
         <div class="hstat-label">Software · Dados · BI</div>
       </div>
       <div class="hstat">
         <span class="hstat-num">&lt; 24h</span>
-        <div class="hstat-label">Tempo de resposta</div>
+        <div class="hstat-label">Retorno garantido</div>
       </div>
     </div>
   </section>
@@ -390,29 +391,127 @@
   <section id="servicos">
     <div class="wrap">
       <div class="hdr reveal">
-        <p class="section-label">O que fazemos</p>
-        <h2 class="section-title">Da engenharia de dados<br><span class="thin">à decisão estratégica</span></h2>
-        <p class="section-desc">Atuamos em toda a cadeia — da infraestrutura de dados à camada de visualização — com tecnologia aplicada ao seu negócio.</p>
+        <p class="section-label">O que entregamos</p>
+        <h2 class="section-title">Três frentes,<br><span class="thin">um único objetivo</span></h2>
+        <p class="section-desc">Cobrimos toda a jornada de dados — da coleta à decisão — com soluções que se encaixam na realidade do seu negócio.</p>
       </div>
       <div class="services-grid reveal">
         <div class="svc">
           <div class="svc-num">01</div>
           <h3>Desenvolvimento<br><span class="l">de Software</span></h3>
-          <p>Criamos aplicações sob medida para automatizar processos, integrar sistemas e resolver problemas reais com código limpo e escalável.</p>
+          <p>Criamos sistemas e automações sob medida que eliminam trabalho manual, conectam ferramentas e escalam junto com o crescimento da empresa.</p>
           <div class="svc-tags"><span class="tag">APIs REST</span><span class="tag">Automações</span><span class="tag">Integrações</span><span class="tag">Web Apps</span></div>
         </div>
         <div class="svc">
           <div class="svc-num">02</div>
           <h3>Engenharia<br><span class="l">&amp; Análise de Dados</span></h3>
-          <p>Estruturamos pipelines robustos, modelamos dados e entregamos análises que sustentam decisões críticas do negócio.</p>
-          <div class="svc-tags"><span class="tag">ETL / ELT</span><span class="tag">Data Modeling</span><span class="tag">SQL Avançado</span><span class="tag">Python</span></div>
+          <p>Estruturamos a fundação dos seus dados: ingestão, transformação, qualidade e modelagem. Para que toda análise parta de uma base confiável.</p>
+          <div class="svc-tags"><span class="tag">ETL</span><span class="tag">DBT</span><span class="tag">SQL Avançado</span><span class="tag">Python</span></div>
         </div>
         <div class="svc">
           <div class="svc-num">03</div>
           <h3>Dashboards<br><span class="l">&amp; Business Intelligence</span></h3>
-          <p>Desenvolvemos painéis interativos que tornam seus dados acessíveis, compreensíveis e acionáveis para toda a equipe.</p>
-          <div class="svc-tags"><span class="tag">Power BI</span><span class="tag">Looker Studio</span><span class="tag">KPIs</span><span class="tag">Real-time</span></div>
+          <p>Traduzimos dados complexos em painéis claros e acionáveis. Cada indicador com propósito, cada visualização com uma decisão por trás.</p>
+          <div class="svc-tags"><span class="tag">Power BI</span><span class="tag">Agentes de IA</span><span class="tag">KPIs</span><span class="tag">Real-time</span></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO TRABALHAMOS -->
+  <section id="processo">
+    <div class="wrap">
+      <div class="hdr reveal">
+        <p class="section-label">Como trabalhamos</p>
+        <h2 class="section-title">Um método claro<br><span class="thin">do problema à solução</span></h2>
+        <p class="section-desc">Cada projeto segue um processo estruturado que garante alinhamento, qualidade e entrega de valor em cada etapa.</p>
+      </div>
+      <div class="process-grid reveal">
+        <div class="proc-step">
+          <div class="proc-num">01 / DESCOBERTA</div>
+          <div class="proc-icon">🔍</div>
+          <h3>Diagnóstico</h3>
+          <p>Mapeamos o contexto, os dados disponíveis e o problema real a resolver. Sem pressupor soluções antes de entender o negócio.</p>
+          <div class="proc-arrow">→</div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-num">02 / ARQUITETURA</div>
+          <div class="proc-icon">🗺️</div>
+          <h3>Desenho da Solução</h3>
+          <p>Definimos a arquitetura técnica, as ferramentas certas e os entregáveis com prazo e critérios de sucesso claros.</p>
+          <div class="proc-arrow">→</div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-num">03 / CONSTRUÇÃO</div>
+          <div class="proc-icon">⚙️</div>
+          <h3>Desenvolvimento</h3>
+          <p>Construímos em ciclos curtos com visibilidade total. Você acompanha o progresso e pode ajustar o rumo a qualquer momento.</p>
+          <div class="proc-arrow">→</div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-num">04 / EVOLUÇÃO</div>
+          <div class="proc-icon">📈</div>
+          <h3>Entrega &amp; Sustentação</h3>
+          <p>Implantamos, documentamos e treinamos o time. Seguimos juntos para garantir que a solução evolua com o negócio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECNOLOGIAS -->
+  <section id="tecnologias">
+    <div class="wrap">
+      <div class="hdr reveal">
+        <p class="section-label">Stack técnico</p>
+        <h2 class="section-title">Tecnologias que<br><span class="thin">dominamos de verdade</span></h2>
+        <p class="section-desc">Ferramentas escolhidas pela maturidade, não pela moda. Cada item do stack foi validado em projetos reais.</p>
+      </div>
+      <div class="tech-groups reveal">
+        <div class="tech-group">
+          <div class="tech-group-label">Linguagens</div>
+          <div class="tech-items">
+            <div class="tech-pill"><div class="dot"></div>Python</div>
+            <div class="tech-pill"><div class="dot"></div>SQL</div>
+            <div class="tech-pill"><div class="dot"></div>DAX</div>
+			<div class="tech-pill"><div class="dot"></div>C#</div>
+			<div class="tech-pill"><div class="dot"></div>JavaScript</div>
+			<div class="tech-pill"><div class="dot"></div>HTML</div>
+			<div class="tech-pill"><div class="dot"></div>CSS</div>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label">Dados &amp; Pipelines</div>
+          <div class="tech-items">
+            <div class="tech-pill"><div class="dot"></div>DBT</div>
+            <div class="tech-pill"><div class="dot"></div>Apache Airflow</div>
+            <div class="tech-pill"><div class="dot"></div>PostgreSQL</div>
+			<div class="tech-pill"><div class="dot"></div>OracleSQL</div>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label">BI &amp; Visualização</div>
+          <div class="tech-items">
+            <div class="tech-pill"><div class="dot"></div>Power BI</div>
+            <div class="tech-pill"><div class="dot"></div>StreamLit</div>
+            <div class="tech-pill"><div class="dot"></div>Excel Avançado</div>
+          </div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-group-label">Backend &amp; APIs</div>
+          <div class="tech-items">
+            <div class="tech-pill"><div class="dot"></div>FastAPI</div>
+			<div class="tech-pill"><div class="dot"></div>Django</div>
+			<div class="tech-pill"><div class="dot"></div>.NET</div>
+          </div>
+        </div>
+		<div class="tech-group">
+		  <div class="tech-group-label">IA &amp; Agentes</div>
+		  <div class="tech-items">
+			<div class="tech-pill"><div class="dot"></div>MCP (Model Context Protocol)</div>
+			<div class="tech-pill"><div class="dot"></div>Integração com Agentes de IA</div>
+			<div class="tech-pill"><div class="dot"></div>LLMs</div>
+		  </div>
+		</div>
       </div>
     </div>
   </section>
@@ -422,17 +521,16 @@
     <div id="sobre-wrap">
       <div class="sobre-text reveal">
         <p class="section-label">Sobre a QueryLab</p>
-        <h2 class="section-title">Uma empresa nascida<br><span class="thin">da prática real</span></h2>
-        <p style="margin-top:1.5rem">A QueryLab surgiu da necessidade real de empresas que acumulam dados mas não conseguem transformá-los em valor. Somos uma equipe técnica com <strong>experiência direta em operações empresariais</strong>.</p>
-        <p>Nosso diferencial está na <strong>combinação de profundidade técnica com visão de negócio</strong> — não entregamos relatórios, entregamos alavancas de decisão.</p>
+        <h2 class="section-title">Nascemos dentro<br><span class="thin">das operações</span></h2>
+        <p style="margin-top:1.5rem">A QueryLab não foi criada em uma garagem — nasceu de quem viveu de perto os desafios de empresas que têm dados, mas não têm clareza. Nossa experiência vem de <strong>dentro das operações reais</strong>, e é isso que nos diferencia de consultorias distantes do dia a dia.</p>
+        <p>Combinamos <strong>rigor técnico com visão de negócio</strong>. Não entregamos relatórios bonitos — entregamos decisões mais rápidas, processos mais eficientes e times que confiam nos próprios dados.</p>
         <div class="values">
-          <div class="val-item"><span class="val-num">01</span> Soluções personalizadas para cada contexto</div>
-          <div class="val-item"><span class="val-num">02</span> Código limpo, documentado e sustentável</div>
-          <div class="val-item"><span class="val-num">03</span> Comunicação direta e entregas pontuais</div>
-          <div class="val-item"><span class="val-num">04</span> Parceria além do projeto: evolução contínua</div>
+          <div class="val-item"><span class="val-num">01</span> Entendemos o negócio antes de escrever código</div>
+          <div class="val-item"><span class="val-num">02</span> Código limpo, documentado e fácil de manter</div>
+          <div class="val-item"><span class="val-num">03</span> Comunicação direta, sem jargão desnecessário</div>
+          <div class="val-item"><span class="val-num">04</span> Parceria de longo prazo, não projeto pontual</div>
         </div>
       </div>
-
       <div class="reveal">
         <div class="terminal">
           <div class="terminal-bar">
@@ -468,18 +566,18 @@
     <div class="contato-wrap">
       <div class="contact-info reveal">
         <p class="section-label">Contato</p>
-        <h2 class="section-title">Vamos construir<br><span class="thin">algo juntos</span></h2>
-        <p>Conte-nos sobre o desafio. Analisamos e respondemos em até 24 horas.</p>
+        <h2 class="section-title">Vamos resolver<br><span class="thin">um problema real</span></h2>
+        <p>Conte-nos sobre o desafio — seja um processo manual que consome tempo, dados que não chegam na hora certa, ou um sistema que não conversa com o outro. A gente analisa e responde em até 24 horas.</p>
         <div class="contact-links">
           <a href="mailto:contato@querylab.com.br" class="clink">
             <div class="clink-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
             contato@querylab.com.br
           </a>
-          <a href="https://wa.me/5562999999999" class="clink" target="_blank">
+          <a href="https://wa.me/5562998597352" class="clink" target="_blank">
             <div class="clink-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
             WhatsApp
           </a>
-          <a href="https://linkedin.com/company/querylab" class="clink" target="_blank">
+          <a href="https://linkedin.com/company/querylab-br" class="clink" target="_blank">
             <div class="clink-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
             LinkedIn
           </a>
@@ -487,15 +585,15 @@
       </div>
 
       <div class="reveal">
-        <form class="contact-form" onsubmit="handleSubmit(event)">
+        <form class="contact-form" id="contact-form">
           <div class="form-row">
-            <div class="fg"><label for="nome">Nome</label><input type="text" id="nome" placeholder="Seu nome" required /></div>
-            <div class="fg"><label for="empresa">Empresa</label><input type="text" id="empresa" placeholder="Nome da empresa" /></div>
+            <div class="fg"><label for="nome">Nome</label><input type="text" id="nome" name="nome" placeholder="Seu nome" required /></div>
+            <div class="fg"><label for="empresa">Empresa</label><input type="text" id="empresa" name="empresa" placeholder="Nome da empresa" /></div>
           </div>
-          <div class="fg"><label for="email">E-mail</label><input type="email" id="email" placeholder="seu@email.com.br" required /></div>
+          <div class="fg"><label for="email">E-mail</label><input type="email" id="email" name="email" placeholder="seu@email.com.br" required /></div>
           <div class="fg">
             <label for="servico">Serviço de interesse</label>
-            <select id="servico">
+            <select id="servico" name="servico">
               <option value="" disabled selected>Selecione um serviço</option>
               <option>Desenvolvimento de Software</option>
               <option>Engenharia &amp; Análise de Dados</option>
@@ -503,7 +601,9 @@
               <option>Mais de um serviço</option>
             </select>
           </div>
-          <div class="fg"><label for="msg">Projeto</label><textarea id="msg" placeholder="Descreva brevemente o problema que você quer resolver..."></textarea></div>
+          <div class="fg"><label for="msg">Projeto</label><textarea id="msg" name="message" placeholder="Descreva brevemente o problema que você quer resolver..."></textarea></div>
+          <div class="form-msg" id="form-success">✓ Mensagem enviada! Retornamos em até 24 horas.</div>
+          <div class="form-msg" id="form-error">Erro ao enviar. Tente novamente ou mande email direto.</div>
           <button type="submit" class="form-submit" id="submit-btn">Enviar mensagem →</button>
         </form>
       </div>
@@ -517,10 +617,11 @@
       <div class="logo-frame-bl"></div><div class="logo-frame-br"></div>
       <div class="logo-text"><span class="q">query</span><span class="l">lab</span></div>
     </a>
-    <span class="footer-copy">© 2025 QUERYLAB · querylab.com.br</span>
+    <span class="footer-copy">© 2026 QUERYLAB · querylab.com.br · Goiânia, Brasil</span>
   </footer>
 
   <script>
+    // Scroll reveal
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e, i) => {
         if (e.isIntersecting) {
@@ -531,24 +632,39 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-    function handleSubmit(e) {
+    // Formspree integration
+    const form = document.getElementById('contact-form');
+    const btn  = document.getElementById('submit-btn');
+    const msgOk  = document.getElementById('form-success');
+    const msgErr = document.getElementById('form-error');
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const btn = document.getElementById('submit-btn');
       btn.textContent = 'Enviando...';
       btn.disabled = true;
-      setTimeout(() => {
-        btn.textContent = '✓ Mensagem enviada!';
-        btn.style.background = '#4af0d4';
-        btn.style.color = '#0a0a0b';
-        e.target.reset();
-        setTimeout(() => {
-          btn.textContent = 'Enviar mensagem →';
-          btn.style.background = '';
-          btn.style.color = '';
-          btn.disabled = false;
-        }, 4000);
-      }, 1200);
-    }
+      msgOk.classList.remove('success');
+      msgErr.classList.remove('error');
+
+      try {
+        const res = await fetch('https://formspree.io/f/mkopjpab', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+        if (res.ok) {
+          msgOk.classList.add('success');
+          form.reset();
+          btn.textContent = '✓ Enviado!';
+          setTimeout(() => { btn.textContent = 'Enviar mensagem →'; btn.disabled = false; }, 5000);
+        } else {
+          throw new Error('server error');
+        }
+      } catch {
+        msgErr.classList.add('error');
+        btn.textContent = 'Enviar mensagem →';
+        btn.disabled = false;
+      }
+    });
   </script>
 </body>
 </html>
